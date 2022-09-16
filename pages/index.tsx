@@ -2,9 +2,33 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useTranslation  } from 'next-i18next';
+import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import StyledComponent from '../components/StyledComponent'
+import HeadSection from '../sections/HeadSection'
+import FeatureSection from '../sections/FeatureSection'
+
+export async function getStaticProps({locale}: { locale: string; }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'footer'])),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+
 
 const Home: NextPage = () => {
+
+  const router = useRouter()
+  const { t } = useTranslation('common');
+
+
+
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -12,15 +36,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <HeadSection/>
+      <FeatureSection/>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        {t('head.title')} to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+         Then you may have a look at <a href={t('blog.optimized.link')}></a>.
         </p>
+
+        <StyledComponent/>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
