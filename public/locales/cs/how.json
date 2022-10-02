@@ -1,0 +1,21 @@
+{
+    "fundingFirst": {
+    "step": "1.Institution raises funding request",
+    "img2alt": "smart contract",
+    "img1alt": "charity",
+    "label1": "Charity",
+    "label2": "Smart contract",
+    "line1": "Create fund A",
+    "line2": "Request $210",
+    "event": "Fund created"
+  },
+  "fundingSecond": {
+    "step": "2. Wealthier users place their microfunds",
+    "img2alt": "smart contract",
+    "img1alt": "user group",
+    "label2": "Smart contract",
+    "line1": "Place 6x micro-funds for fund A",
+    "line2": "Each with a cap $100 locked in the contract",
+    "event": "6x micro-funds created for fund A"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "title":{
+    "funding": "Chain funding",
+    "prom": "Advertisement",
+    "help": "Help market",
+    "head": "How it works",
+    "sub": "Learn key concepts",
+    "button1": "Chain funding - Next step in evolution crowdfunding models",
+    "button2": "Help market - Request or provide technical help",
+    "button3": "Gamified advertisement - Promote product in map"
+  },
+  "fundingFirst": {
+    "step": "1. Institution raises funding request",
+    "img2alt": "smart contract",
+    "img1alt": "charity",
+    "label1": "Charity",
+    "label2": "Smart contract",
+    "line1": "Create fund A",
+    "line2": "Request $210",
+    "event2": "Fund created"
+  },
+  "fundingSecond": {
+    "step": "2. Wealthier users place their microfunds",
+    "img2alt": "smart contract",
+    "img1alt": "user group",
+    "label2": "Smart contract",
+    "line1": "Place 6x microfunds for fund A",
+    "line2": "Each with a cap $100 locked in the contract",
+    "event2": "6x microfunds created for fund A"
+  },
+  "fundingThird": {
+    "step": "3. Invests $10 from to fund A",
+    "img2alt": "smart contract",
+    "img1alt": "user group",
+    "label2": "Smart contract",
+    "line1": "Invests $10 from to fund A",
+    "line2": "Adds $6x10 from assigned microfunds",
+    "event1": "Cap reached",
+    "event2": "$210 sent to charity wallet.",
+    "event3": "$40 sent back to each microfund owners as surplus"
+  },
+  "fundingExplainer":{
+    "title": "Funding",
+    "p": "Microfund is working similar to a collection, but initialized by each additional donation.",
+    "li1": "Microfund creator could set any maximum limit to be drawn from. This amount is sent to the smart contract.",
+    "li2": "If funded project does not draw all allocation from Microfund, rest of the allocations is returned to the creator",
+    "li3": "User could combine in one transaction both microfund creation and donation",
+    "li4": "NO platform fee is charged, gas cost is paid in native token to blockchain network."
+  },
+  "promFirst": {
+    "step": "1. Business entity advertises product, discounted with QR code",
+    "img2alt": "smart contrac",
+    "img1alt": "business",
+    "label1": "Business",
+    "label2": "Smart contract",
+    "line1": "Pays fee 10EYE/day",
+    "line2": "Offers QR discount",
+    "event2": "50% fee to Project treasury",
+    "event3": "50% fee Burns permanently"
+  },
+  "promSecond": {
+    "step": "2. Users buying products online or locally",
+    "img2alt": "smart contract",
+    "img1alt": "user group",
+    "label1": "Mobile user",
+    "label2": "Smart contract",
+    "line1": "Plays games",
+    "line2": "Buys products",
+    "event2": "Gain reputation points",
+    "event3": "- Total (Behavioral)"
+  },
+  "promExplainer":{
+    "title": "Advertisement",
+    "p": "Business can use app to advertise its product - goods, services, consumables.",
+    "li1": "Advertisement fee costs 10EYE/day, half burns immediately, half goes to project treasury used further by DAO.",
+    "li2": "Advertiser has to offer discounts to users via web or mobile app form to become visible on map.",
+    "li3": "User is able to report falsy or abusive advertisement which impacts both reputations and future possibilities in application."
+  },
+  "helpFirst": {
+    "step": "1. User requests help or review from the network.",
+    "img2alt": "smart contract",
+    "img1alt": "business",
+    "label1": "Business",
+    "label2": "Smart contract",
+    "line1": "TBD text1",
+    "line2": "TBD text2",
+    "event2": "Quest created",
+    "event3": "Specialists are notified"
+  },
+  "helpSecond": {
+    "step": "2. Other user (specialist) accepts the quest",
+    "img2alt": "smart contract",
+    "img1alt": "user",
+    "label1": "Mobile user",
+    "label2": "Smart contract",
+    "line1": "Complete task",
+    "line2": "Result get verified",
+    "event2": "Receive $$ reward",
+    "event3": "Gain reputation (Total + Skill)"
+  },
+  "helpExplainer":{
+    "title": "Request & Review",
+    "p": "User has to choose skill category needed, attach reference URL to the work and place request to the public market.",
+    "li1": "Other users subscribed to given skill category are notified new quest is available, able to accept via web or mobile app.",
+    "li2": "After help is done, requestor confirms in app the goal was achieved. Only after comfirmation task executor is rewarded.",
+    "li3": "Executor receives amount of tokens and reputation points dynamically based on the network usage. Less users are engaged, more rewarding math is applied."
+  }
+}
