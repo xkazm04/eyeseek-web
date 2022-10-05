@@ -1,25 +1,132 @@
 
 {
-    "head": {
-        "title": "Welcome, bitch",
-        "description": "Desc"
-    },
-    "h1": "A simple example",
-    "change-locale": "Change locale to \"{{changeTo}}\"",
-    "to-second-page": "To second page",
-    "error-with-status": "A {{statusCode}} error occurred on server",
-    "error-without-status": "An error occurred on the server",
-    "title": "Home | next-i18next",
-    "blog": {
-      "optimized": {
-        "question": "Do you like to unleash some super powers to have all side optimized translations?",
-        "answer": "Then you may have a look at <1>this blog post</1>.",
-        "link": "https://locize.com/blog/next-i18next/"
-      },
-      "ssg": {
-        "question": "Do you want to use SSG (next export)?",
-        "answer": "Then you may have a look at <1>this blog post</1>.",
-        "link": "https://locize.com/blog/next-i18n-static/"
-      }
-    }
-  }
+  "head": {
+      "title": "EYESEEK",
+      "subtitle": "I pomáhat může být zábava",
+      "description": "Sociální aplikace, která odměňuje dobré skutky díky blockchainu.",
+      "button": "Spojme se na Discordu",
+      "beta": "Beta verze k dispozici 1/2023"
+  },
+  "landing":{
+    "helpTitle": "Úkoly",
+    "helpText1": "Řekni si o názor, zpětnou vazbu nebo pomoc pro řešení jakéhokoliv problému. Vyber si, jaký obor tě zajímá a podpoř v něm další, kteří potřebují poradit.",
+    "helpText2": "Splň zadání, získej odměny v tokenech a reputaci experta na v oblastec jako jsou:",
+    "helpText3": "Zkus si aplikaci jen tak pro zábavu a najdi parťáky na",
+    "helpLi1": "Vývoj softwaru",
+    "helpLi2": "Umění a design",
+    "helpLi3": "Hudební produkce",
+    "helpLi4": "Sporty",
+    "helpLi5": "LANky a online pařby",
+    "helpLi6": "Cestování",
+    "helpLi7": "Ochutnávky jídla a vína",
+    "quoteHelp": "Využití blockchainu ke sjednocení",
+    "quoteShark": "Ukaž, co v tobě je",
+    "sharkTitle": "Shark tank",
+    "sharkText1": "Pochlub se s nápadem a vytvoř výzvy pro ostatní uživatele.",
+    "sharkText2": "Spoj se s dalšími v tvém městě a podnikněte dohromady události jako:",
+    "sharkText3": "Dostaň svůj business na výsluní a zviditelni se v mapě aplikace",
+    "sharkLi1": "Example 1",
+    "sharkLi2": "Tour de beer",
+    "sharkLi3": "Burger geocaching",
+    "sharkLi4": "Example4",
+    "sharkButton": "Zjisti, jak Shark Tank funguje",
+    "fundingTitle": "Řetězové financování",
+    "fundingText1": "Gamifikace financování crowdfunding projektů za dobrým účelem.",
+    "fundingText2": "Využití smart kontraktů pro vytvoření prostředí teorie her, kde i dar menších částek může mnohonásobný dopad.",
+    "fundingLi1": "Charita",
+    "fundingLi2": "Věda a výzum",
+    "fundingLi3": "Vzdělání",
+    "fundingButton": "Zjisti, jak řetězové financování funguje",
+    "roadmap": "Plán projektu",
+    "team": "Tým"
+  },
+  "header":{
+    "howWorks": "Jak to funguje",
+    "tokenomics": "Tokenomika",
+    "whitepaper": "Whitepaper",
+    "docs": "Docs",
+    "dashboard": "Aplikace",
+    "playground": "Hřiště"
+  },
+  "token":{
+    "button": "Stáhnout whitepaper",
+    "reference": "Více o tokenech"
+  },
+  "footer":{
+    "socialEmail": "Email",
+    "socialTwitter": "Twitter",
+    "socialMedium": "Medium",
+    "socialDiscord": "Discord"
+  },
+  "roadmap":{
+    "q1date": "Q4 2022",
+    "q1title": "Teď",
+    "q1point1": "Reputační model",
+    "q1point2": "Ekonomika tokenu",
+    "q1point3": "Whitepaper",
+    "q1point4": "Portál dokumentace",
+    "q1point5": "Úvodní stránka",
+    "q2date": "Q1 2023",
+    "q2title": "Beta",
+    "q2point1": "Funkce - Úkoly",
+    "q2point2": "Funkce - Shark tank",
+    "q2point3": "Funkce - Řetězové financování",
+    "q2point4": "Předprodej tokenu",
+    "q2point5": "Webová i mobilní aplikace",
+    "q3date": "Q2 2023",
+    "q3title": "Mainnet",
+    "q3point1": "Google/Apple store",
+    "q3point2": "Gamifikace charity",
+    "q3point3": "Statistické přehledy",
+    "q3point4": "Vydání tokenu",
+    "q3point5": "Geo-reklama",
+    "q4date": "Q3 2023",
+    "q4title": "Uživatelská zkušenost",
+    "q4point1": "Plugin pro třetí strany",
+    "q4point2": "Funkce - Výzvy",
+    "q4point3": "Funkce - Soukromé zprávy",
+    "q4point4": "Funkce - Udělej si sám",
+    "q4point5": "Lokalizace do 20+ jazyků",
+    "q5date": "Q4 2023",
+    "q5title": "Cesta za decentralizací",
+    "q5point1": "Decentralizovaná infrastruktura",
+    "q5point2": "Decentralizovaný vývoj aplikace",
+    "q5point3": "Decentralizované ověření charit. institucí",
+    "q5point4": "DAO odměny",
+    "q5point5": "Autonomní aplikací"
+  },
+  "play": {
+    "title": "Hřiště s funkcemi",
+    "connection": "Připojení peněženky",
+    "connected": "Připojeno k ",
+    "transaction": "Transakce",
+    "wrongNetwork": "Nesprávná síť, zkus prosím změnit síť na Mumbai",
+    "wrongMumbai": "Nejdříve se připoj na Mumbai",
+    "disconnect": "Odpojit se",
+    "microfunds": "Mikrofondy",
+    "fundTitle": "1. Vytvoř nový fond",
+    "fundCap": "Kapacita fondů",
+    "fundCreate": "Vytvořit fond",
+    "fundCreated": "Fond založen",
+    "fundInfo": "Detail fondu",
+    "fundState": "Stav",
+    "fundStateFunded": "Naplněn",
+    "fundStateActive": "Aktivní",
+    "fundStateNA": "N/A",
+    "approvalTitle": "2. Potvrzení",
+    "approvalNotice": "Potvrď částku před zadáním daru",
+    "approvalAmount": "Částka k potvrzení",
+    "approvalApprove": "Potvrdit",
+    "walletCheck": "Zkontroluj stav v peněžence",
+    "transactionError": "Něco se posralo:"
+  },
+  "math":{
+    "amount": "Částka",
+    "balance": "Stav účtu",
+    "cap": "Cílová částka"
+  },
+  "h1": "A simple example",
+  "change-locale": "Change locale to \"{{changeTo}}\"",
+  "to-second-page": "To second page",
+  "error-with-status": "A {{statusCode}} error occurred on server"
+}

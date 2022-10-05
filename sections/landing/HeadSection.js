@@ -94,7 +94,6 @@ const EyeBox = styled.div`
     position: absolute;
     top: 90%;
     right: 40%;
-    opacity: 0.3;
     z-index: 50;
     @media (max-width: 1018px) {
         display: none;
@@ -128,6 +127,7 @@ const HeadSection = () => {
             <Subtitle text={t('head.subtitle')}/>
         </TitleBox>
 
+
         </HeadBox>
             <TitleDesc>{t('head.description')}</TitleDesc>
              <DiscordButton
@@ -136,6 +136,7 @@ const HeadSection = () => {
                 >{t('head.button')}
             </DiscordButton>
         </Container>
+        <TitleDesc>{t('head.beta')}</TitleDesc>
             </motion.div></>
 }
 

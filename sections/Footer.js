@@ -36,8 +36,6 @@ const FooterItem = styled.div`
     }
 `
 
-
-
 const HeadSection = () => {
 
     const { t } = useTranslation('common');
@@ -45,16 +43,16 @@ const HeadSection = () => {
     return <><Container>
 
         <FooterSection>
-                <FooterItem><EmailIcon width={50}/>{t('footer.socialEmail')}</FooterItem>
+                <FooterItem> <a href="mailto: eyeseek@proton.me"> <EmailIcon width={50}/></a>eyeseek@proton.me</FooterItem>
         </FooterSection>
         <FooterSection>
                 <FooterItem><DiscordIcon width={30}/>{t('footer.socialDiscord')}</FooterItem>
         </FooterSection>
         <FooterSection>
-                <FooterItem><TwitterIcon width={30}/>{t('footer.socialTwitter')}</FooterItem>
+                <FooterItem><a href='https://twitter.com/Eyeseek6' target="_blank" rel="noopener noreferrer" > <TwitterIcon width={30}/>{t('footer.socialTwitter')}</a></FooterItem>
         </FooterSection>
         <FooterSection>
-                <FooterItem><MediumIcon width={30}/>{t('footer.socialMedium')}</FooterItem>
+                <FooterItem><a href='https://medium.com/eyeseek' target="_blank" rel="noopener noreferrer" ><MediumIcon width={30}/>{t('footer.socialMedium')}</a></FooterItem>
         </FooterSection>
         </Container></>
 }

@@ -20,7 +20,7 @@ const NavItem = styled.div`
     align-items: center;
     letter-spacing: 1px;
     &:hover{
-     cursor: pointer;
+         cursor: pointer;
    }
    @media (max-width: 768px) {
      font-size: 1em;
@@ -71,7 +71,7 @@ const MenuBox = styled.div`
     }
 `
 
-const A = styled.div`
+const A = styled.a`
     &:hover{
      opacity: 0.8;
    }
@@ -114,7 +114,7 @@ const Header = () => {
                 {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
             </NavItem>
             <NavItem>
-                   <A>{t('header.whitepaper')}</A>  <ExitIcon width={10}/>
+                <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
                  <A>{t('header.docs')}</A>  <ExitIcon width={10}/>
@@ -132,7 +132,7 @@ const Header = () => {
                 {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
             </NavItem>
             <NavItem>
-                   <A>{t('header.whitepaper')}<ExitIcon width={10}/></A>  
+                   <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
                  <A>{t('header.docs')}<ExitIcon width={10}/></A>  

@@ -1,0 +1,37 @@
+{
+    "pressure":{
+      "head": "Token pressure",
+      "title1": "Buy",
+      "title2": "Sell",
+      "point1": "Advertisement",
+      "point2": "Crowdfunding involvement",
+      "point3": "DAO Bounty",
+      "point4": "Liquidity incentives",
+      "desc1": "Test description 1",
+      "desc2": "Chain funding",
+      "desc3": "Chain funding",
+      "desc4": "Chain funding",
+      "point5": "Community rewards",
+      "point6": "Crwodfunding cashout",
+      "point7": "Liquidity rewards",
+      "point8": "Vesting releases",
+      "desc5": "Test description 1",
+      "desc6": "Chain funding",
+      "desc7": "Chain funding",
+      "desc8": "Chain funding"
+    },
+    "supply":{
+        "head": "Token supply",
+        "title1": "ss",
+        "title2": "Crwodfunding cashout",
+        "point1": "Liquidity rewards",
+        "point2": "Vesting releases",
+        "point3": "Vesting releases",
+        "point4": "Vesting releases",
+        "desc1": "Test description 1",
+        "desc2": "Chain funding",
+        "desc3": "Chain funding",
+        "desc4": "Chain funding",
+        "desc5": "Chain funding"
+      }
+  }

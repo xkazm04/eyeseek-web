@@ -9,7 +9,7 @@ import Token1 from '../public/Token1.png'
 import Eye10 from '../public/Eye10.png'
 import LandingFire from '../public/LandingFire.png'
 import LandingMoney from '../public/LandingMoney.png'
-import {FireIcon, SellIcon} from '../components/icons/LandingSet'
+import {BuyIcon, FireIcon, MintIcon, SellIcon} from '../components/icons/LandingSet'
 import Eye7 from '../public/Eye7.png'
 
 export async function getStaticProps({locale}: { locale: string; }) {
@@ -85,13 +85,15 @@ const Point = styled.div`
     font-family: 'Chill';
     font-weight: lighter;
     font-size: 1.3em;
+    padding-top: 2px;
     margin-bottom: 3%;
+    text-align: center;
     &:hover{
         cursor: pointer;
         opacity: 0.8;
     }
     @media (max-width: 1068px) {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 `
 const ActPoint = styled(Point)`
@@ -109,19 +111,19 @@ const DescTitle = styled.div`
     margin-bottom: 1%;
     text-decoration: underline;
     @media (max-width: 1068px) {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 `
 
 const DescDesc = styled.div`
     @media (max-width: 1068px) {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 `
 
 const ImgBox = styled.div`
     position: absolute;
-    margin-top: -5%;
+    top: -20px;
     @media (max-width: 1068px) {
         display: none;
     }
@@ -162,9 +164,10 @@ function Tokenomics() {
         im: string
     }
 
-    const changePoint = (desc,point) => {
+    const changePoint = (desc,point,im) => {
         setPoint(point)
         setPressDesc(desc)
+        setPressImage(im)
     }
 
     const changeSupPoint = (desc,point,im) => {
@@ -174,7 +177,7 @@ function Tokenomics() {
     }
     
     const PointComponent = ({func, point, desc, im}) => {
-        return <>{pressDesc === desc ? <ActPoint>{point}</ActPoint> : <Point onClick={()=>{func(desc,point,im)}}>{point}</Point>}</>
+        return <>{pressPoint === point ? <ActPoint>{point}</ActPoint> : <Point onClick={()=>{func(desc,point,im)}}>{point}</Point>}</>
     }
 
     return (
@@ -184,30 +187,28 @@ function Tokenomics() {
             <Main>
                 <Container>
                     <Subtitle text={t('pressure.title1')}/>
-                        <PointComponent func={changePoint} point={t('pressure.point1')} desc={t('pressure.desc1')} />
-                        <PointComponent func={changePoint} point={t('pressure.point2')} desc={t('pressure.desc2')} />
-                        <PointComponent func={changePoint} point={t('pressure.point3')} desc={t('pressure.desc3')} />
-                        <PointComponent func={changePoint} point={t('pressure.point4')} desc={t('pressure.desc4')} />
+                        <PointComponent func={changePoint} point={t('pressure.point1')} desc={t('pressure.desc1')} im={'buy'} />
+                        <PointComponent func={changePoint} point={t('pressure.point2')} desc={t('pressure.desc2')} im={'buy'}/>
+                        <PointComponent func={changePoint} point={t('pressure.point3')} desc={t('pressure.desc3')} im={'buy'}/>
+                        <PointComponent func={changePoint} point={t('pressure.point4')} desc={t('pressure.desc4')} im={'buy'}/>
                 </Container>
              <Container>  
              <ImageBox><Image
                 src={Token1}
                 alt="token1"
-                fill="responsive"
             /></ImageBox>
              </Container>   
                 <Container>
                 <Subtitle text={t('pressure.title2')}/>
-                    <PointComponent func={changePoint} point={t('pressure.point4')} desc={t('pressure.desc4')}/>
-                    <PointComponent func={changePoint} point={t('pressure.point5')} desc={t('pressure.desc5')}/>
-                    <PointComponent func={changePoint} point={t('pressure.point6')} desc={t('pressure.desc6')}/>
-                    <PointComponent func={changePoint} point={t('pressure.point7')} desc={t('pressure.desc7')}/>
+                    <PointComponent func={changePoint} point={t('pressure.point4')} desc={t('pressure.desc4')} im={'sell'} />
+                    <PointComponent func={changePoint} point={t('pressure.point5')} desc={t('pressure.desc5')} im={'sell'} />
+                    <PointComponent func={changePoint} point={t('pressure.point6')} desc={t('pressure.desc6')} im={'sell'} />
+                    <PointComponent func={changePoint} point={t('pressure.point7')} desc={t('pressure.desc7')} im={'sell'} />
                 </Container> 
             </Main>
             <DescBox>
-                <ImgBox>{pressImg === 'sell' && <SellIcon width={20} height={100}/>} 
-                
-                </ImgBox>
+                <ImgBox>{pressImg === 'sell' && <SellIcon width={20} height={100}/>} {pressImg === 'buy' && <BuyIcon width={20} height={100} />} </ImgBox>
+
                 <DescTitle>{pressPoint}</DescTitle> 
                 
                     <DescDesc>{pressDesc}</DescDesc>
@@ -234,30 +235,29 @@ function Tokenomics() {
             <Main>
             <Container>
                     <Subtitle text={t('supply.title1')}/>
-                        <PointComponent func={changePoint} point={t('supply.point1')} desc={t('supply.desc1')} />
-                        <PointComponent func={changePoint} point={t('supply.point2')} desc={t('supply.desc2')} />
-                        <PointComponent func={changePoint} point={t('supply.point3')} desc={t('supply.desc3')} />
-                        <PointComponent func={changeSupPoint} point={t('supply.point4')} desc={t('supply.desc4')} im='burn' />
+                        <PointComponent func={changeSupPoint} point={t('supply.point1')} desc={t('supply.desc1')} im='mint'/>
                 </Container>
              <Container>  
              <ImageBox><Image
                 src={Eye10}
                 alt="Eye10"
-                fill='responsive'
             /></ImageBox>
              </Container>   
              <Container>
-                    <Subtitle text={t('supply.title1')}/>
-                        <PointComponent func={changePoint} point={t('supply.point1')} desc={t('supply.desc1')} />
-                        <PointComponent func={changePoint} point={t('supply.point2')} desc={t('supply.desc2')} />
-                        <PointComponent func={changePoint} point={t('supply.point3')} desc={t('supply.desc3')} />
-                        <PointComponent func={changePoint} point={t('supply.point4')} desc={t('supply.desc4')} />
+                    <Subtitle text={t('supply.title2')}/>
+                        <PointComponent func={changeSupPoint} point={t('supply.point2')} desc={t('supply.desc2')} im='burn'  />
+                        <PointComponent func={changeSupPoint} point={t('supply.point3')} desc={t('supply.desc3')} im='burn' />
                 </Container>
             </Main>
             <DescBox>
-                <ImgSupBox>{supplyImg === 'burn' && <FireIcon width={50} />}</ImgSupBox>
-                <DescTitle>{pressPoint}</DescTitle> 
-                <DescDesc>{pressDesc}</DescDesc>
+                <ImgSupBox>
+                    {supplyImg === 'burn' && <FireIcon width={50} />}
+                    {supplyImg === 'mint' && <MintIcon width={40} />}
+                
+                
+                </ImgSupBox>
+                <DescTitle>{supplyPoint}</DescTitle> 
+                <DescDesc>{supplyDesc}</DescDesc>
                 
                 </DescBox>
 

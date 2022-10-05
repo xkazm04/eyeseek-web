@@ -6,7 +6,8 @@ const Container = styled.div`
     border-radius: 35px;
     font-size: 1.1em;
     font-family: 'Roboto';
-    font-weight: lighter;
+    font-weight: 300;
+    letter-spacing: 0.2px;
     text-align: left;
     padding: 8%;
     @media (max-width: 1268px) {

@@ -1,0 +1,55 @@
+{
+    "time": {
+        "exampleTime1": "3w",
+        "exampleTime2": "55min",
+        "exampleTime3": "1w",
+        "exampleTime4": "1mo"
+    },
+    "cat":{
+        "musicFeedback": "Please rate my music",
+        "musicExample": "DnB, BandCamp review",
+        "sportPlayer": "Looking for a player",
+        "sportExample": "19:30, Main stadium, $20 entry",
+        "codeFeedback": "Please review my code",
+        "codeExample": "100 rows, $10 reward",
+        "funTravel": "Looking for travel buddy",
+        "funExample": "6-month journey, join the party"
+    },
+    "quest":{
+        "titleAvailable": "Available quests"
+    },
+    "auth":{
+        "walletCheck": "Check wallet",
+        "transactionError": "An error occurred preparing the transaction:"
+    },
+    "funding": {
+        "amountTotal": "Total charged amount",
+        "calc": "Calculate outcome",
+        "donate": "3. Donate",
+        "donateAmount": "Donate",
+        "donationAmount": "Donation amount",
+        "donationDirect": "Direct donation",
+        "exampleParagraph": "The research question is whether we can get students to enjoy IT more by engaging them with new Raspberry Pi modules. This will be tested with an action research approach.",
+        "exampleSubtitle": "IT education using Raspberry PI",
+        "exampleTitle": "Institute of Technology",
+        "microAmount": "Microfund amount",
+        "microCreate": "Create microfund with amount",
+        "microJoin": "Microfunds to join",
+        "multiplicator": "Multiplicator",
+        "projectId": "Project ID",
+        "statsDonated": "Donated",
+        "statsMicroActive": "Active microfunds",
+        "statsProject": "Project detail",
+        "statsReference": "Reference",
+        "titleDetail": "Funding detail",
+        "totalReceived": "Fund receives"
+    },
+    "shark":{
+        "exampleTitle": "Burger FEAST by Popeye",
+        "exampleSubtitle": "Weekly challenge (2/5)",
+        "exampleLocation": "Yum Yum",
+        "exampleAddress": "Bacon street, 22",
+        "geoFound": "Location found",
+        "discountAvailable": "Discount available!"
+    }
+}

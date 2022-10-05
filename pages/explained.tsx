@@ -93,7 +93,7 @@ const ImageBox = styled.div`
     return (
       <Container>
             <EyeBox><Image src={Eye} alt={'eye'} width={250} height={200} /></EyeBox>
-            <ElipseBox><Image src={elipse} alt='elipse' fill='full' /></ElipseBox>
+            <ElipseBox><Image src={elipse} alt='elipse' /></ElipseBox>
         <Heading>
             <TitleBox><Title text={t('title.head')} />
             <Subtitle text={t('title.sub')} /></TitleBox>
@@ -108,10 +108,10 @@ const ImageBox = styled.div`
             <ExpFunding />
 
             <ImageBox><Image
-            src={Eye7}
-            alt="Eye7"
-            width={'600%'}
-            height={'70%'}
+              src={Eye7}
+              alt="Eye7"
+              width={'600%'}
+              height={'70%'}
             />
             </ImageBox>
       </Container>
