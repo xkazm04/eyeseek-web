@@ -31,8 +31,13 @@ const Container = styled.div`
     };}
 `
 
+type PulsingProps ={ 
+    color: string;
+    onClick: () => void;
+}
 
-const PulsingDot = ({color, onClick}) => {
+
+const PulsingDot = ({color, onClick}: PulsingProps) => {
     return <Container color={color} onClick={onClick}
     ></Container>
 }

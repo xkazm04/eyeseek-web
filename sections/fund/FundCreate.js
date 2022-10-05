@@ -54,7 +54,7 @@ const FundCreate = () => {
 
     return <Container>
         <Subtitle text={t('play.fundTitle')}/>
-        {t('math.amount')} (>= 1)
+        {t('math.amount')} 
             <NumInput placeholder={t('play.fundCap')} onChange={handleFundAmount} min={0} ></NumInput>
             {chain && chain.name === 'Mumbai' ? <button disabled={!write} onClick={() => write?.()}>
             {t('play.fundCreate')}

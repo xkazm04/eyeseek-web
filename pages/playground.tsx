@@ -120,6 +120,7 @@ const SubActButton = styled(SubButton)`
          <Subtitle text={t('play.connection')} /> 
          {connector && <div>{t('play.connected')} {connector.name}, {connector.id}, {chain && chain.name}</div>}
          {chain && chain.name !== 'Mumbai' && <Warning>{t('play.wrongNetwork')}</Warning>}
+         {/* @ts-ignore */}
           <Button onClick={disconnect}>{t('play.disconnect')}</Button>
           </Left>
 

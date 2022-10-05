@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next';
 import Header from '../sections/Header'
 import Footer from '../sections/Footer'
@@ -37,6 +36,10 @@ const client = createClient({
   autoConnect: true,
 });
 
+type AppProps ={ 
+    Component: any;
+    pageProps: any;
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

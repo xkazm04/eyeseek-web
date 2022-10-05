@@ -117,7 +117,7 @@ const Header = () => {
                 <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
-                 <A>{t('header.docs')}</A>  <ExitIcon width={10}/>
+                 <A href="https://www.docs.eyeseek.org" target="_blank" rel="noopener noreferrer">{t('header.docs')}  <ExitIcon width={10}/></A>
             </NavItem>
         </MenuBox>
         

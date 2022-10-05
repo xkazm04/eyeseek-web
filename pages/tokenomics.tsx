@@ -155,8 +155,6 @@ function Tokenomics() {
 
     const { t } = useTranslation('tokenomics');
 
-    // Typescript https://dev.to/wpreble1/typescript-with-react-functional-components-4c69
-
     type PointProps = {
         func: Function,
         point: string,
@@ -164,19 +162,19 @@ function Tokenomics() {
         im: string
     }
 
-    const changePoint = (desc,point,im) => {
+    const changePoint = ({desc,point,im}: PointProps) => {
         setPoint(point)
         setPressDesc(desc)
         setPressImage(im)
     }
 
-    const changeSupPoint = (desc,point,im) => {
+    const changeSupPoint = ({desc,point,im}: PointProps) => {
         setSupplyPoint(point)
         setSupplyDesc(desc)
         setSupplyImage(im)
     }
     
-    const PointComponent = ({func, point, desc, im}) => {
+    const PointComponent = ({func, point, desc, im}:PointProps) => {
         return <>{pressPoint === point ? <ActPoint>{point}</ActPoint> : <Point onClick={()=>{func(desc,point,im)}}>{point}</Point>}</>
     }
 
