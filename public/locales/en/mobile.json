@@ -51,5 +51,9 @@
         "exampleAddress": "Bacon street, 22",
         "geoFound": "Location found",
         "discountAvailable": "Discount available!"
+    },
+    "landing":{
+        "quoteHelp": "Using blockchain to unite people",
+        "quoteShark": "Expose your skills and ideas"
     }
 }

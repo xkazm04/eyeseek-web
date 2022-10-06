@@ -39,6 +39,8 @@ const TitleBox = styled.div`
     padding: 2%;
     margin-bottom: 1%;
     max-width: 500px;
+    border: 1px solid #757575;
+    border-radius: 15px;
     @media (max-width: 1018px) {
         width: 100%;
         padding-left: 5%;
@@ -52,12 +54,14 @@ const HeadBox = styled.div`
 
 const TitleDesc = styled.div`
     font-size: 2em;
-    font-family: 'NoBill';
+    font-family: 'Gemunu Libre', sans-serif;
     word-wrap: break-word;
-    font-weight: 500;
+    font-weight: 300;
     margin: 2%;
     max-width: 50%;
     color: #B0F6FF;
+    z-index: 50;
+    letter-spacing: 0.1px;
     margin-bottom: 1%;
     @media (max-width: 1018px) {
         max-width: 100%;
@@ -65,6 +69,11 @@ const TitleDesc = styled.div`
         font-size: 1.5em;
         padding-left: 5%;
     }
+`
+
+const BetaDesc = styled(TitleDesc)`
+    font-size: 1.5em;
+    font-style: italic;
 `
 
 const DiscordButton = styled(motion.button)`
@@ -129,14 +138,14 @@ const HeadSection = () => {
 
 
         </HeadBox>
-            <TitleDesc>{t('head.description')}</TitleDesc>
-             <DiscordButton
-                whileHover={{ scale: 0.98 }} 
-                transition={{ type: "spring", stiffness: 500, damping: 3 }}
-                >{t('head.button')}
-            </DiscordButton>
-        </Container>
-        <TitleDesc>{t('head.beta')}</TitleDesc>
+                <TitleDesc>{t('head.description')}</TitleDesc>  <BetaDesc>{t('head.beta')}</BetaDesc>
+                <DiscordButton
+                    whileHover={{ scale: 0.98 }} 
+                    transition={{ type: "spring", stiffness: 500, damping: 3 }}
+                    >{t('head.button')}
+                </DiscordButton>
+            </Container>
+      
             </motion.div></>
 }
 

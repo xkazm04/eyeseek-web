@@ -12,10 +12,13 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     height: 500px;
-    margin-top: 15%;
+    margin-top: 25%;
     padding-bottom: 20%;
     @media (max-width: 1068px) {
         display: none;
+    }
+    @media (min-width: 1768px) {
+        margin-top: 15%;
     }
 `
 

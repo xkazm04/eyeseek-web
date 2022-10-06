@@ -5,14 +5,14 @@ const Container = styled(motion.button)`
     border: 1px solid rgba(255,255,255,0.3);;
     border-radius: 5px;
     background: rgba(0,0,0,0.1);
-    padding: 2%;
+    padding: 15px;
     padding-left: 10%;
     padding-right: 10%;
     font-family: 'Chill';
     font-size: 1em;
     font-weight: 700;
-    letter-spacing: 0.2px;
-    margin-top: 5%;
+    letter-spacing: 1px;
+    margin-top: 2%;
     &:hover{
         cursor: pointer;
         opacity: 0.8;

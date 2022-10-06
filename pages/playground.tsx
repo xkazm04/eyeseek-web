@@ -4,15 +4,15 @@ import {
     useDisconnect,
     useNetwork,
   } from 'wagmi'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation  } from 'next-i18next';
 import styled from 'styled-components';
 import Subtitle from '../components/typography/Subtitle';
 import PlayFunding from '../sections/playground/PlayFunding'
+import Quests from '../sections/playground/Quests'
 import Image from 'next/image';
 import Eye9 from '../public/Eye9.png'
-
 
   export async function getStaticProps({locale}: { locale: string; }) {
     return {
@@ -95,19 +95,25 @@ const SubActButton = styled(SubButton)`
     const [feat, setFeat] = useState('Funding');
 
     // Wallet connection hooks
-    const { connector, isConnected } = useAccount()
+    const { address, connector, isConnected } = useAccount()
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
     const { disconnect } = useDisconnect()
     const {chain} = useNetwork()
 
+    useEffect(() => {
+      if (address) {
+        localStorage.setItem('eye_address', address);
+      }
+    },[connect]);
+
     if (isConnected) {
       return (
         <> <Header>  <Subtitle text={t('play.title')}/> 
-            <Submenu>
+            {/* <Submenu>
             {feat === 'Funding' ? <SubActButton>Funding</SubActButton> : <SubButton onClick={()=>{setFeat('Funding')}}>Funding</SubButton> }
             {feat === 'Shark' ? <SubActButton>Shark</SubActButton> : <SubButton onClick={()=>{setFeat('Shark')}}>Shark</SubButton> }
-            {feat === 'Quest' ? <SubActButton>Quest</SubActButton> : <SubButton onClick={()=>{setFeat('Quest')}}>Quest</SubButton> }
-        </Submenu>
+            {feat === 'Quests' ? <SubActButton>Quest</SubActButton> : <SubButton onClick={()=>{setFeat('Quests')}}>Quest</SubButton> }
+        </Submenu> */}
         </Header>
       
         <Container>
@@ -119,12 +125,14 @@ const SubActButton = styled(SubButton)`
        <Left>
          <Subtitle text={t('play.connection')} /> 
          {connector && <div>{t('play.connected')} {connector.name}, {connector.id}, {chain && chain.name}</div>}
+         
          {chain && chain.name !== 'Mumbai' && <Warning>{t('play.wrongNetwork')}</Warning>}
          {/* @ts-ignore */}
           <Button onClick={disconnect}>{t('play.disconnect')}</Button>
           </Left>
 
         {feat === 'Funding' && <PlayFunding />}
+        {feat === 'Quests' && <Quests />}
          </Row>
 
         </Container></>

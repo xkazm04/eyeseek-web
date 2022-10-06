@@ -38,7 +38,8 @@
     "fundingLi3": "Vzdělání",
     "fundingButton": "Zjisti, jak řetězové financování funguje",
     "roadmap": "Plán projektu",
-    "team": "Tým"
+    "team": "Tým",
+    "teamOverseer": "👁️‍🗨️verseer"
   },
   "header":{
     "howWorks": "Jak to funguje",
@@ -49,7 +50,7 @@
     "playground": "Hřiště"
   },
   "token":{
-    "button": "Stáhnout whitepaper",
+    "button": "Více v dokumentace",
     "reference": "Více o tokenech"
   },
   "footer":{

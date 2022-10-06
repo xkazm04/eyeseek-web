@@ -6,8 +6,6 @@ import LDesc from '../typography/LDesc';
 import LPoint from '../typography/LPoint';
 import Image from 'next/image'
 import Eye4 from '../../public/Eye4.png'
-import { RightArrow } from '../icons/MobileSet';
-
 const Container = styled.div`
     padding: 5%;
     width: 70%;
@@ -21,19 +19,6 @@ const ImageBox = styled.div`
    left: 0;
    margin-left: 10%;
     margin-top: -10%;
-`
-
-const FollowUp = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    margin-top: -10%;
-    margin-right: 5%;
-    @media (max-width: 768px) {
-        display: none;
-    }
 `
 
 const FeatureHelp = () => {
@@ -60,8 +45,6 @@ const FeatureHelp = () => {
         <LPoint text={t('landing.helpLi4')}/>
         <LPoint text={t('landing.helpLi5')}/>
         <LPoint text={t('landing.helpLi6')}/>
-
-        <FollowUp>{t('header.howWorks')}<RightArrow width={30}/></FollowUp>
     </Container>
 }
 

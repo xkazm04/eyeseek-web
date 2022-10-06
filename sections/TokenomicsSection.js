@@ -9,6 +9,7 @@ import LButton from '../components/buttons/LButton';
 import Subtitle from '../components/typography/Subtitle';
 
 const Container = styled.div`
+    position: relative;
     background: linear-gradient(180deg, rgba(22, 0, 0, 0.3) 50%, rgba(22, 0, 0, 0) 100%);
     text-align: center;
 `
@@ -18,6 +19,7 @@ const ImageBox = styled.div`
 `
 const TitleBox = styled.div`
     position: absolute;
+    top: -10%;
     padding-left: 17%;
     z-index: 1;
 `
@@ -29,6 +31,10 @@ const ActionBox = styled.div`
     align-items: center;
 `
 
+const A = styled.a`
+    width: 100%;
+`
+
 const TokenomicsSection = () => {
 
     const { t } = useTranslation('common');
@@ -38,11 +44,10 @@ const TokenomicsSection = () => {
         <ImageBox><Image
             src={Tokenomics}
             alt="Tokenomics"
-            fill="full"
             /></ImageBox>
             <ActionBox>
                     <Subtitle text={t('token.reference')}/>
-                <LButton text={t('token.button')}/>
+                  <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer"> <LButton text={t('token.button')}/></A>
             
             </ActionBox>
 

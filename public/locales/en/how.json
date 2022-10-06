@@ -2,12 +2,13 @@
   "title":{
     "funding": "Chain funding",
     "prom": "Advertisement",
-    "help": "Help market",
+    "help": "Quests",
     "head": "How it works",
     "sub": "Learn key concepts",
-    "button1": "Chain funding - Next step in evolution crowdfunding models",
-    "button2": "Help market - Request or provide technical help",
-    "button3": "Gamified advertisement - Promote product in map"
+    "button1": "Chain funding - Revolutionary method in crowdfunding models",
+    "button2": "Quests - Request or provide technical help",
+    "button3": "Gamified advertisement",
+    "docs": "Documentation references"
   },
   "fundingFirst": {
     "step": "1. Institution raises funding request",

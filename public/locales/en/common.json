@@ -19,6 +19,7 @@
       "helpLi5": "Online gaming",
       "helpLi6": "Travelling",
       "helpLi7": "Food & drink tasting",
+      "teamOverseer": "👁️‍🗨️verseer",
       "quoteHelp": "Using blockchain to unite people",
       "quoteShark": "Expose your skills and ideas",
       "sharkTitle": "Shark tank",
@@ -49,7 +50,7 @@
       "playground": "Playground"
     },
     "token":{
-      "button": "Download whitepaper",
+      "button": "Go to the docs",
       "reference": "More about tokenomics"
     },
     "footer":{

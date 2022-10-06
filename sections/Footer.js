@@ -27,7 +27,7 @@ const FooterItem = styled.div`
         opacity: 0.5;
     }
     font-size: 1em;
-    font-family: 'NoBill';
+    font-family: 'Gemunu Libre', sans-serif;
     font-style: normal;
     letter-spacing: 1px;
     color: #B0F6FF;
@@ -43,10 +43,10 @@ const HeadSection = () => {
     return <><Container>
 
         <FooterSection>
-                <FooterItem> <a href="mailto: eyeseek@proton.me"> <EmailIcon width={50}/></a>eyeseek@proton.me</FooterItem>
+                <FooterItem> <a href="mailto: eyeseek@proton.me"> <EmailIcon width={50}/>eyeseek@proton.me</a></FooterItem>
         </FooterSection>
         <FooterSection>
-                <FooterItem><DiscordIcon width={30}/>{t('footer.socialDiscord')}</FooterItem>
+                <FooterItem><a href='https://twitter.com/Eyeseek6' target="_blank" rel="noopener noreferrer" > <DiscordIcon width={30}/>{t('footer.socialDiscord')}</a></FooterItem>
         </FooterSection>
         <FooterSection>
                 <FooterItem><a href='https://twitter.com/Eyeseek6' target="_blank" rel="noopener noreferrer" > <TwitterIcon width={30}/>{t('footer.socialTwitter')}</a></FooterItem>

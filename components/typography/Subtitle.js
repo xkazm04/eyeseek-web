@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 const Box = styled.div`
-    font-size: 2em;
-    font-family: 'NoBill';
+    font-size: 2.1em;
+    font-family: 'Gemunu Libre', sans-serif;
     letter-spacing: 1px;
+    font-weight: 300;
+    font-style: italic;
     @media (max-width: 1168px) {
         font-size: 1.5em;
     }

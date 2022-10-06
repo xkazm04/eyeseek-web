@@ -15,7 +15,7 @@ const Container = styled.div`
 const NavItem = styled.div`
     display: flex;
     font-size: 1.6em;
-    font-family: 'NoBill';
+    font-family: 'Gemunu Libre', sans-serif;
     font-style: normal;
     align-items: center;
     letter-spacing: 1px;
@@ -71,7 +71,7 @@ const MenuBox = styled.div`
     }
 `
 
-const A = styled.a`
+const A = styled.div`
     &:hover{
      opacity: 0.8;
    }
@@ -95,14 +95,12 @@ const Header = () => {
 
     return <><Container>
         <HeadBox>
-        <ImageBox><Link href="/"><A><Image
+        <ImageBox>  <NavItem onClick={()=>{setActive("Home")}}><Link href="/"><A><Image
             src={Logo}
             alt="Logo"
             width={'110%'}
             height={'50%'}
-            /></A></Link> </ImageBox>
-        
-
+            /></A></Link></NavItem> </ImageBox>
          <MenuBox>
             <NavItem onClick={()=>{setActive("Explained")}}>
                 {active === "Explained" ? <Link href="/explained"><AB>{t('header.howWorks')}</AB></Link> : <Link href="/explained"><A>{t('header.howWorks')}</A></Link>}
@@ -114,10 +112,10 @@ const Header = () => {
                 {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
             </NavItem>
             <NavItem>
-                <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
+                <A><a href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></a></A>  
             </NavItem>
             <NavItem>
-                 <A href="https://www.docs.eyeseek.org" target="_blank" rel="noopener noreferrer">{t('header.docs')}  <ExitIcon width={10}/></A>
+                 <A><a href="https://www.docs.eyeseek.org" target="_blank" rel="noopener noreferrer">{t('header.docs')}  <ExitIcon width={10}/></a></A>
             </NavItem>
         </MenuBox>
         

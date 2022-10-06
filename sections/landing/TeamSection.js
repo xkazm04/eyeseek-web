@@ -10,7 +10,7 @@ import LButton from '../../components/buttons/LButton';
 
 const Container = styled.div`
     font-size: 1.2em;
-    font-family: 'NoBill';
+    font-family: 'Gemunu Libre', sans-serif;
     padding: 3%;
 `
 
@@ -53,11 +53,11 @@ const TeamSection = () => {
        <Team>
         <ImageBox><Image src={MK} alt="MK" />
             <div>Michal Každan</div>
-            <div>👁️‍🗨️verseer {t('landing.teamOverseer')}</div>
+            <div>{t('landing.teamOverseer')}</div>
             <a href='https://www.linkedin.com/in/michalkazdan' target="_blank" rel="noopener noreferrer"><LinkedIcon width='30px'/></a>
             </ImageBox>
             <FollowUp><Title text='++ It could be y👁️u'/>
-            <LButton text={'Feel free to contact'}/></FollowUp>
+            <a href="mailto: eyeseek@proton.me"> <LButton text={'Feel free to contact'}/></a></FollowUp>
             <EyeBox><Image src={Eye8} alt="Eye8" width={'300%'} height={'370%'} />
             </EyeBox>
         </Team>

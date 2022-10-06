@@ -11,6 +11,8 @@ import Image from 'next/image';
 import Eye from '../public/Eye.png'
 import elipse from '../public/elipse.png'
 import Eye7 from '../public/Eye7.png'
+import LButton from '../components/buttons/LButton';
+import MTitle from '../components/typography/MTitle';
 
 
 
@@ -87,6 +89,12 @@ const ImageBox = styled.div`
     position: relative;
 `
 
+const ButtonBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+`
+
   export default function Explained() {
     const { t } = useTranslation('how');
   
@@ -97,10 +105,14 @@ const ImageBox = styled.div`
         <Heading>
             <TitleBox><Title text={t('title.head')} />
             <Subtitle text={t('title.sub')} /></TitleBox>
-            <SectionButton>{t('title.button1')}</SectionButton>
-            <SectionButton>{t('title.button2')}</SectionButton>
-            <SectionButton>{t('title.button3')}</SectionButton>
 
+          <MTitle text={t('title.docs')} />
+
+        <ButtonBox>
+          <a href=''>  <LButton text={t('title.button1')}/></a>
+          <a href=''>   <LButton text={t('title.button2')}/></a>
+          <a href=''>    <LButton text={t('title.button3')}/></a>
+        </ButtonBox>
 
         </Heading>
             <ExpHelp/>
