@@ -6,6 +6,7 @@ const Box = styled.div`
     letter-spacing: 1px;
     font-weight: 300;
     font-style: italic;
+    margin-bottom: 4%;
     @media (max-width: 1168px) {
         font-size: 1.5em;
     }

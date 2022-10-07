@@ -11,7 +11,7 @@ const Container = styled(motion.button)`
     font-family: 'Chill';
     font-size: 1em;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.7px;
     margin-top: 2%;
     &:hover{
         cursor: pointer;

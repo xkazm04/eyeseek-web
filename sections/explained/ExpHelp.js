@@ -62,7 +62,7 @@ const { t } = useTranslation('how');
         line1={t('helpFirst.line1')} 
         line2={t('helpFirst.line2')} 
         event1={t('helpFirst.event2')}
-        event3={t('helpSecond.event3')}
+        event3={t('helpFirst.event3')}
     />
 
     <HowToRow

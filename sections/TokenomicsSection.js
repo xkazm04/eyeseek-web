@@ -7,6 +7,7 @@ import Tokenomics from '../public/Tokenomics.png'
 import Title from '../components/typography/Title';
 import LButton from '../components/buttons/LButton';
 import Subtitle from '../components/typography/Subtitle';
+import Link from 'next/link';
 
 const Container = styled.div`
     position: relative;
@@ -31,8 +32,13 @@ const ActionBox = styled.div`
     align-items: center;
 `
 
-const A = styled.a`
-    width: 100%;
+const Op = styled.div`
+    transition: 0.2s;
+    &:hover{
+        opacity: 0.8;
+        cursor: pointer;
+        border-bottom: 1px solid #B0F6FF;
+    }
 `
 
 const TokenomicsSection = () => {
@@ -40,14 +46,13 @@ const TokenomicsSection = () => {
     const { t } = useTranslation('common');
 
     return <><Container>
-          <TitleBox> <Title  text={t('header.tokenomics')}/></TitleBox>
+          <TitleBox> <Title  text={t('header.tokenDistribution')}/></TitleBox>
         <ImageBox><Image
             src={Tokenomics}
             alt="Tokenomics"
             /></ImageBox>
             <ActionBox>
-                    <Subtitle text={t('token.reference')}/>
-                  <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer"> <LButton text={t('token.button')}/></A>
+            <Op><Link href="/tokenomics"><Subtitle text={t('token.reference')}/></Link></Op>
             
             </ActionBox>
 

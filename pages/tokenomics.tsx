@@ -11,6 +11,8 @@ import LandingFire from '../public/LandingFire.png'
 import LandingMoney from '../public/LandingMoney.png'
 import {BuyIcon, FireIcon, MintIcon, SellIcon} from '../components/icons/LandingSet'
 import Eye7 from '../public/Eye7.png'
+import {motion} from 'framer-motion'
+import TokenomicsSection from '../sections/TokenomicsSection';
 
 export async function getStaticProps({locale}: { locale: string; }) {
   return {
@@ -57,6 +59,7 @@ const DescBox = styled.div`
     padding: 3%;
     border: 1px solid #B9B9B9;
     border-radius: 15px;
+    margin-bottom: 15%;
     animation: fadeIn 0.5s;
     @keyframes fadeIn {
         0% { opacity: 0; }
@@ -81,13 +84,14 @@ const MoneyBox = styled.div`
         display: none;
     }
 `
-const Point = styled.div`
+const Point = styled(motion.div)`
     font-family: 'Chill';
     font-weight: lighter;
     font-size: 1.3em;
     padding-top: 2px;
     margin-bottom: 3%;
     text-align: center;
+    transition: 0.1s;
     &:hover{
         cursor: pointer;
         opacity: 0.8;
@@ -116,6 +120,7 @@ const DescTitle = styled.div`
 `
 
 const DescDesc = styled.div`
+    line-height: 1.2;
     @media (max-width: 1068px) {
         font-size: 0.7em;
     }
@@ -142,15 +147,13 @@ const EyeBox = styled.div`
 `
 
 
-// Vytvořit komponentu
-// Fade efekty
 
 function Tokenomics() {
-    const [pressPoint, setPoint] = useState('Advertisement');
-    const [pressDesc, setPressDesc] = useState('Something')
-    const [pressImg, setPressImage] = useState('sell')
-    const [supplyPoint, setSupplyPoint] = useState('Something')
-    const [supplyDesc, setSupplyDesc] = useState('Something')
+    const [pressPoint, setPressPoint] = useState('Expected buy/sell pressures');
+    const [pressDesc, setPressDesc] = useState('Click on the points to see the description');
+    const [pressImg, setPressImage] = useState('buy')
+    const [supplyPoint, setSupplyPoint] = useState('Supply mechanisms')
+    const [supplyDesc, setSupplyDesc] = useState('Click on the points to see the description')
     const [supplyImg, setSupplyImage] = useState('burn')
 
     const { t } = useTranslation('tokenomics');
@@ -162,20 +165,36 @@ function Tokenomics() {
         im: string
     }
 
-    const changePoint = ({desc,point,im}: PointProps) => {
-        setPoint(point)
+        // @ts-ignore
+    const changePoint = (desc,point,im) => {
+        setPressPoint(point)
         setPressDesc(desc)
         setPressImage(im)
     }
 
-    const changeSupPoint = ({desc,point,im}: PointProps) => {
+    // @ts-ignore
+    const changeSupPoint = (desc,point,im) => {
         setSupplyPoint(point)
         setSupplyDesc(desc)
         setSupplyImage(im)
     }
-    
-    const PointComponent = ({func, point, desc, im}:PointProps) => {
-        return <>{pressPoint === point ? <ActPoint>{point}</ActPoint> : <Point onClick={()=>{func(desc,point,im)}}>{point}</Point>}</>
+
+    // @ts-ignore
+    const PointComponent = ({func, point, desc, im}) => {
+        return <>{pressPoint === point ? <ActPoint>{point}</ActPoint> : <Point 
+        whileHover={{ scale: 0.98 }} 
+        transition={{ type: "spring", stiffness: 500, damping: 3 }}
+        onClick={()=>{func(desc,point,im)}}>{point}
+        </Point>}</>
+    }
+
+    // @ts-ignore
+    const PointSupComponent = ({func, point, desc, im}) => {
+        return <>{supplyPoint === point ? <ActPoint>{point}</ActPoint> : <Point 
+        whileHover={{ scale: 0.98 }} 
+        transition={{ type: "spring", stiffness: 500, damping: 3 }}
+        onClick={()=>{func(desc,point,im)}}>{point}
+        </Point>}</>
     }
 
     return (
@@ -198,7 +217,6 @@ function Tokenomics() {
              </Container>   
                 <Container>
                 <Subtitle text={t('pressure.title2')}/>
-                    <PointComponent func={changePoint} point={t('pressure.point4')} desc={t('pressure.desc4')} im={'sell'} />
                     <PointComponent func={changePoint} point={t('pressure.point5')} desc={t('pressure.desc5')} im={'sell'} />
                     <PointComponent func={changePoint} point={t('pressure.point6')} desc={t('pressure.desc6')} im={'sell'} />
                     <PointComponent func={changePoint} point={t('pressure.point7')} desc={t('pressure.desc7')} im={'sell'} />
@@ -233,7 +251,7 @@ function Tokenomics() {
             <Main>
             <Container>
                     <Subtitle text={t('supply.title1')}/>
-                        <PointComponent func={changeSupPoint} point={t('supply.point1')} desc={t('supply.desc1')} im='mint'/>
+                        <PointSupComponent func={changeSupPoint} point={t('supply.point1')} desc={t('supply.desc1')} im='mint'/>
                 </Container>
              <Container>  
              <ImageBox><Image
@@ -243,8 +261,8 @@ function Tokenomics() {
              </Container>   
              <Container>
                     <Subtitle text={t('supply.title2')}/>
-                        <PointComponent func={changeSupPoint} point={t('supply.point2')} desc={t('supply.desc2')} im='burn'  />
-                        <PointComponent func={changeSupPoint} point={t('supply.point3')} desc={t('supply.desc3')} im='burn' />
+                        <PointSupComponent func={changeSupPoint} point={t('supply.point2')} desc={t('supply.desc2')} im='burn'  />
+                        <PointSupComponent func={changeSupPoint} point={t('supply.point3')} desc={t('supply.desc3')} im='burn' />
                 </Container>
             </Main>
             <DescBox>
@@ -258,6 +276,8 @@ function Tokenomics() {
                 <DescDesc>{supplyDesc}</DescDesc>
                 
                 </DescBox>
+
+                <TokenomicsSection/>
 
         <EyeBox><Image
             src={Eye7}

@@ -6,6 +6,7 @@ import LDesc from '../typography/LDesc';
 import LPoint from '../typography/LPoint';
 import Image from 'next/image'
 import Eye4 from '../../public/Eye4.png'
+import LButton from '../buttons/LButton';
 const Container = styled.div`
     padding: 5%;
     width: 70%;
@@ -45,6 +46,7 @@ const FeatureHelp = () => {
         <LPoint text={t('landing.helpLi4')}/>
         <LPoint text={t('landing.helpLi5')}/>
         <LPoint text={t('landing.helpLi6')}/>
+        <div>   <LButton text={t('landing.helpButton')}/></div>
     </Container>
 }
 

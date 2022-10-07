@@ -12,8 +12,6 @@ import Eye from '../public/Eye.png'
 import elipse from '../public/elipse.png'
 import Eye7 from '../public/Eye7.png'
 import LButton from '../components/buttons/LButton';
-import MTitle from '../components/typography/MTitle';
-
 
 
   export async function getStaticProps({locale}: { locale: string; }) {
@@ -42,35 +40,21 @@ const Heading = styled.div`
     background: rgba(0, 0, 0, 0.6);
     padding: 5%;
     border-radius: 15px;
-    padding-right: 30%;
-      margin-bottom: 7%;
-      animation: fadeIn 0.5s;
+    margin-bottom: 7%;
+    animation: fadeIn 0.5s;
+    width: 80%;
+ 
     @keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
     }
 `
 const TitleBox = styled.div`
+    width: 60%;
     background: #140505;
     padding: 5%;
     margin-bottom: 9%;
-`
-
-const SectionButton = styled.div`
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    background: rgba(26, 26, 26, 0.5);
-    width: 100%;
-    border: 1px solid #BBBBBB;
-    border-radius: 15px;
-    padding: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 1%;
-    @media (max-width: 768px) {
-      display: none;
-    }
-    
+    border: 1px solid #757575;
 `
 
 const EyeBox = styled.div`
@@ -89,12 +73,6 @@ const ImageBox = styled.div`
     position: relative;
 `
 
-const ButtonBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-`
-
   export default function Explained() {
     const { t } = useTranslation('how');
   
@@ -105,19 +83,15 @@ const ButtonBox = styled.div`
         <Heading>
             <TitleBox><Title text={t('title.head')} />
             <Subtitle text={t('title.sub')} /></TitleBox>
+          <LButton text={t('title.docs')} />
 
-          <MTitle text={t('title.docs')} />
 
-        <ButtonBox>
-          <a href=''>  <LButton text={t('title.button1')}/></a>
-          <a href=''>   <LButton text={t('title.button2')}/></a>
-          <a href=''>    <LButton text={t('title.button3')}/></a>
-        </ButtonBox>
 
         </Heading>
             <ExpHelp/>
             <ExpPromotion />
             <ExpFunding />
+            <LButton text={t('title.docs')} />
 
             <ImageBox><Image
               src={Eye7}

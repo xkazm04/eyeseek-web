@@ -19,9 +19,6 @@ const NavItem = styled.div`
     font-style: normal;
     align-items: center;
     letter-spacing: 1px;
-    &:hover{
-         cursor: pointer;
-   }
    @media (max-width: 768px) {
      font-size: 1em;
      flex-wrap: wrap;
@@ -74,6 +71,7 @@ const MenuBox = styled.div`
 const A = styled.div`
     &:hover{
      opacity: 0.8;
+     cursor: pointer;
    }
 `
 
@@ -105,9 +103,9 @@ const Header = () => {
             <NavItem onClick={()=>{setActive("Explained")}}>
                 {active === "Explained" ? <Link href="/explained"><AB>{t('header.howWorks')}</AB></Link> : <Link href="/explained"><A>{t('header.howWorks')}</A></Link>}
             </NavItem>
-            <NavItem onClick={()=>{setActive("Playground")}}>
+            {/* <NavItem onClick={()=>{setActive("Playground")}}>
                 {active === "Playground" ? <Link href="/playground"><AB>{t('header.playground')}</AB></Link> : <Link href="/playground"><A>{t('header.playground')}</A></Link>}
-            </NavItem>
+            </NavItem> */}
             <NavItem onClick={()=>{setActive("Tokenomics")}}>
                 {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
             </NavItem>

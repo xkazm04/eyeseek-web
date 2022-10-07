@@ -57,7 +57,7 @@ const TeamSection = () => {
             <a href='https://www.linkedin.com/in/michalkazdan' target="_blank" rel="noopener noreferrer"><LinkedIcon width='30px'/></a>
             </ImageBox>
             <FollowUp><Title text='++ It could be y👁️u'/>
-            <a href="mailto: eyeseek@proton.me"> <LButton text={'Feel free to contact'}/></a></FollowUp>
+            <a href="mailto: eyeseek@proton.me"> <LButton text={t('landing.teamReach')}/></a></FollowUp>
             <EyeBox><Image src={Eye8} alt="Eye8" width={'300%'} height={'370%'} />
             </EyeBox>
         </Team>

@@ -17,6 +17,9 @@ const Container = styled.div`
     @media (max-width: 768px) {
         width: 100%;
     }
+    @media (min-width: 1768px) {
+        width: 90%;
+    }
 `
 const ImageBox = styled.div`
    position: absolute;
@@ -48,6 +51,10 @@ const FeatureShark = () => {
         <LPoint text={t('landing.sharkLi4')}/>
         <br></br>
         <LDesc text={t('landing.sharkText3')}/></div>
+        <br></br>
+        <LPoint text={t('landing.sharkLi5')}/>
+        <LPoint text={t('landing.sharkLi6')}/>
+        <LPoint text={t('landing.sharkLi7')}/>
      <div>   <LButton text={t('landing.sharkButton')}/></div>
     </Container>
 }

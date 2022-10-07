@@ -41,8 +41,14 @@ const MobileBox = styled.div`
     right: 20%;
     margin-top: -15px;
     height: 750px;
+    @media (max-width: 1268px) {
+        right: 10%;
+    }
     @media (max-width: 768px) {
         display: none;
+    }
+    @media (min-width: 2268px) {
+        right: 30%;
     }
 `
 
