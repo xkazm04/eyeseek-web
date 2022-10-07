@@ -55,7 +55,7 @@ const FeatureShark = () => {
         <LPoint text={t('landing.sharkLi5')}/>
         <LPoint text={t('landing.sharkLi6')}/>
         <LPoint text={t('landing.sharkLi7')}/>
-     <div>   <LButton text={t('landing.sharkButton')}/></div>
+     <div>  <a href='https://www.docs.eyeseek.org/docs/whitepaper/sharktank' target="_blank" rel="noopener noreferrer"> <LButton text={t('landing.sharkButton')}/></a></div>
     </Container>
 }
 

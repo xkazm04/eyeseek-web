@@ -33,10 +33,10 @@ const FeatureFunding = () => {
 
     return <Container>
         <ImageBox><Image
-            src={Eye6}
-            alt="Eye6"
-            width={'1080%'}
-            height={'120%'}
+                src={Eye6}
+                alt="Eye6"
+                width={'1080%'}
+                height={'120%'}
             />
             </ImageBox>
       <div>  <Title text={t('landing.fundingTitle')}/>
@@ -47,7 +47,7 @@ const FeatureFunding = () => {
         <br></br>
         <LDesc text={t('landing.fundingText2')}/>
         <br></br></div>
-     <div>   <LButton text={t('landing.fundingButton')}/></div>
+         <div>   <a href='https://www.docs.eyeseek.org/docs/whitepaper/chaindonation' target="_blank" rel="noopener noreferrer"> <LButton text={t('landing.fundingButton')}/></a></div>
     </Container>
 }
 

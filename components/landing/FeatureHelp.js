@@ -46,7 +46,7 @@ const FeatureHelp = () => {
         <LPoint text={t('landing.helpLi4')}/>
         <LPoint text={t('landing.helpLi5')}/>
         <LPoint text={t('landing.helpLi6')}/>
-        <div>   <LButton text={t('landing.helpButton')}/></div>
+        <div>  <a href='https://www.docs.eyeseek.org/docs/whitepaper/quests' target="_blank" rel="noopener noreferrer"> <LButton text={t('landing.helpButton')}/></a></div>
     </Container>
 }
 

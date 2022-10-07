@@ -46,7 +46,7 @@ const HeadSection = () => {
                 <FooterItem> <a href="mailto: eyeseek@proton.me"> <EmailIcon width={50}/>eyeseek@proton.me</a></FooterItem>
         </FooterSection>
         <FooterSection>
-                <FooterItem><a href='https://twitter.com/Eyeseek6' target="_blank" rel="noopener noreferrer" > <DiscordIcon width={30}/>{t('footer.socialDiscord')}</a></FooterItem>
+                <FooterItem> <a href='https://discord.gg/JnTgUEZvtR' target="_blank" rel="noopener noreferrer"><DiscordIcon width={30}/>{t('footer.socialDiscord')}</a></FooterItem>
         </FooterSection>
         <FooterSection>
                 <FooterItem><a href='https://twitter.com/Eyeseek6' target="_blank" rel="noopener noreferrer" > <TwitterIcon width={30}/>{t('footer.socialTwitter')}</a></FooterItem>

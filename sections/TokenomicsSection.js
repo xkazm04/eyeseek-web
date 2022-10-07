@@ -5,7 +5,6 @@ import { useTranslation  } from 'next-i18next';
 import Image from 'next/image'
 import Tokenomics from '../public/Tokenomics.png'
 import Title from '../components/typography/Title';
-import LButton from '../components/buttons/LButton';
 import Subtitle from '../components/typography/Subtitle';
 import Link from 'next/link';
 
