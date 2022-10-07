@@ -53,7 +53,8 @@
       "docs": "Docs",
       "dashboard": "Dashboard",
       "playground": "Playground",
-      "tokenDistribution": "Token distribution"
+      "tokenDistribution": "Token distribution",
+      "deck": "Pitch deck"
     },
     "token":{
       "button": "Go to the docs",

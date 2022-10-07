@@ -2,7 +2,8 @@ import {motion} from 'framer-motion'
 import styled from 'styled-components'
 
 const Container = styled(motion.button)`
-    border: 1px solid rgba(255,255,255,0.3);;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
     border-radius: 5px;
     background: rgba(0,0,0,0.1);
     padding: 15px;

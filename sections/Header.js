@@ -113,6 +113,9 @@ const Header = () => {
                 <A><a href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></a></A>  
             </NavItem>
             <NavItem>
+                   <A href='Eyeseek_Pitch.pdf' target="_blank" rel="noopener noreferrer">{t('header.deck')}<ExitIcon width={10}/></A>  
+            </NavItem>
+            <NavItem>
                  <A><a href="https://www.docs.eyeseek.org" target="_blank" rel="noopener noreferrer">{t('header.docs')}  <ExitIcon width={10}/></a></A>
             </NavItem>
         </MenuBox>
@@ -129,6 +132,9 @@ const Header = () => {
             </NavItem>
             <NavItem>
                    <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
+            </NavItem>
+            <NavItem>
+                   <A href='Eyeseek_Pitch.pdf' target="_blank" rel="noopener noreferrer">{t('header.deck')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
                  <A>{t('header.docs')}<ExitIcon width={10}/></A>  
