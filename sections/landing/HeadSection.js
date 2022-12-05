@@ -138,7 +138,7 @@ const HeadSection = () => {
 
 
         </HeadBox>
-                <TitleDesc>{t('head.description')}</TitleDesc>  <BetaDesc>{t('head.beta')}</BetaDesc>
+                <TitleDesc>{t('head.description')}</TitleDesc> 
               <a href='https://discord.gg/JnTgUEZvtR' target="_blank" rel="noopener noreferrer"> <DiscordButton
                     whileHover={{ scale: 0.98 }} 
                     transition={{ type: "spring", stiffness: 500, damping: 3 }}

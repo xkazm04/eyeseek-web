@@ -4,7 +4,6 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Eye7 from '../public/Eye7.png'
 import { motion } from "framer-motion"
 import {useRef, useEffect} from 'react'
 import { useTranslation } from 'next-i18next'
@@ -26,9 +25,6 @@ import { useAccount, useConnect, useSignMessage, useDisconnect } from 'wagmi';
 import axios from 'axios';
 
 const HeadSection = dynamic(() => import('../sections/landing/HeadSection'), { ssr: false })
-const RoadmapSection = dynamic(() => import('../sections/landing/RoadmapSection'), { ssr: false })
-const TokenomicsSection = dynamic(() => import('../sections/TokenomicsSection'), { ssr: false })
-const TeamSection = dynamic(() => import('../sections/landing/TeamSection'), { ssr: false })
 const FeatureHelp = dynamic(() => import('../components/landing/FeatureHelp'), {})
 const FeatureFunding = dynamic(() => import('../components/landing/FeatureFunding'), {})
 const FeatureShark = dynamic(() => import('../components/landing/FeatureShark'), {})
@@ -176,17 +172,6 @@ const Home: NextPage = () => {
         <Linear><Feature textPart={<FeatureHelp/>} mobilePart={<MobileHelp/>}/><Quote text={t('landing.quoteHelp')}/></Linear>
          <LinearTwo>   <Feature textPart={<FeatureShark/>} mobilePart={<MobileShark/>}/>   <Quote text={t('landing.quoteShark')}/></LinearTwo>
            <LinearThree> <Feature textPart={<FeatureFunding/>} mobilePart={<MobileFunding/>}/>   </LinearThree>
-      <RoadmapSection/>
-      <TokenomicsSection/>
-     
-      <TeamSection/>
-            <EyeSevenBox><Image
-            src={Eye7}
-            alt="Eye7"
-            width={'600%'}
-            height={'70%'}
-            />
-            </EyeSevenBox>
             
     </Kontejner>
   )

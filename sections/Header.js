@@ -103,17 +103,8 @@ const Header = () => {
             <NavItem onClick={()=>{setActive("Explained")}}>
                 {active === "Explained" ? <Link href="/explained"><AB>{t('header.howWorks')}</AB></Link> : <Link href="/explained"><A>{t('header.howWorks')}</A></Link>}
             </NavItem>
-            {/* <NavItem onClick={()=>{setActive("Playground")}}>
-                {active === "Playground" ? <Link href="/playground"><AB>{t('header.playground')}</AB></Link> : <Link href="/playground"><A>{t('header.playground')}</A></Link>}
-            </NavItem> */}
-            <NavItem onClick={()=>{setActive("Tokenomics")}}>
-                {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
-            </NavItem>
             <NavItem>
                 <A><a href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></a></A>  
-            </NavItem>
-            <NavItem>
-                   <A href='Eyeseek_Pitch.pdf' target="_blank" rel="noopener noreferrer">{t('header.deck')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
                  <A><a href="https://www.docs.eyeseek.org" target="_blank" rel="noopener noreferrer">{t('header.docs')}  <ExitIcon width={10}/></a></A>
@@ -124,17 +115,8 @@ const Header = () => {
       <NavItem onClick={()=>{setActive("Explained")}}>
                 {active === "Explained" ? <Link href="/explained"><AB>{t('header.howWorks')}</AB></Link> : <Link href="/explained"><A>{t('header.howWorks')}</A></Link>}
             </NavItem>
-            <NavItem onClick={()=>{setActive("Playground")}}>
-                {active === "Playground" ? <Link href="/playground"><AB>{t('header.playground')}</AB></Link> : <Link href="/playground"><A>{t('header.playground')}</A></Link>}
-            </NavItem>
-            <NavItem onClick={()=>{setActive("Tokenomics")}}>
-                {active === "Tokenomics" ? <Link href="/tokenomics"><AB>{t('header.tokenomics')}</AB></Link> : <Link href="/tokenomics"><A>{t('header.tokenomics')}</A></Link>}
-            </NavItem>
             <NavItem>
                    <A href='Whitepaper_v1.pdf' target="_blank" rel="noopener noreferrer">{t('header.whitepaper')}<ExitIcon width={10}/></A>  
-            </NavItem>
-            <NavItem>
-                   <A href='Eyeseek_Pitch.pdf' target="_blank" rel="noopener noreferrer">{t('header.deck')}<ExitIcon width={10}/></A>  
             </NavItem>
             <NavItem>
                  <A>{t('header.docs')}<ExitIcon width={10}/></A>  
